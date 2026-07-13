@@ -9,7 +9,7 @@ from executor import code_interpreter
 from tools import tools
 
 load_dotenv()
-api_key = os.getenv("OPENROUTER")
+api_key = os.getenv("openrouter")
 MODEL_NAME = "openai/gpt-oss-20b:free"
 client = OpenAI(api_key=api_key, base_url="https://openrouter.ai/api/v1")
 
