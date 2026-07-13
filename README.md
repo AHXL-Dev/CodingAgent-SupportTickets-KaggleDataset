@@ -18,6 +18,12 @@ There are two ways into a conversation:
 
 I've only allowed pandas,matplotlib and seaborn , and then the other normal inbuilt packages. I have done this deliberately but more could be added if wanted.
 
+## Testing and playing with the app
+
+You can access the app here: https://codingagent-supporttickets-kaggledataset-uwdrnbkggfcqkdugeoxv9.streamlit.app/
+
+Note: please read below. I am using a free GPT OSS 20B model, so there is a chance there will be rate limiting. Please see the section here "# About the model, and why you might see rate limit messages"
+
 ## Dataset
 
 [eCommerce Customer Service Satisfaction](https://www.kaggle.com/datasets/ddosad/ecommerce-customer-service-satisfaction) by ddosad on Kaggle — one month of customer support tickets for a fictional platform, with category/sub-category, customer remarks, agent details, item price, and CSAT score. Per Kaggle, the underlying data is fabricated with the Faker library, so nothing here is real customer information.
