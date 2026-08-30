@@ -11,7 +11,7 @@ def build_system_prompt(df: pd.DataFrame) -> str:
         if n > 0
     )
     categorical_column_counts = []
-    for col in df.select_dtypes(include="str").columns:
+    for col in df.select_dtypes(include="object").columns:
         if (col in ("Unique id", "Order_id")) or (df[col].nunique() > 50):
             continue
         highest_counts = df[col].value_counts().head(5)
@@ -57,6 +57,9 @@ Numeric column stats:
 
 CSAT is coded as follows: 1 = Very Unsatisfied, 2 = Unsatisfied, 3 = Neutral, 4 = Satisfied, 5 = Very Satisfied.
 CSAT is always calculated as a % of tickets with a score of 4 or 5 divided by the total number of tickets THAT HAVE A CSAT SCORE (from 1 to 5).
-Values are in this column: 'CSAT'
+Values are in this column: 'CSAT Score'
+'CSAT Label' is a text version of 'CSAT Score' and is ordinal, ranked
+Very Unsatisfied < Unsatisfied < Neutral < Satisfied < Very Satisfied.
+Use 'CSAT Score' for any arithmetic; use 'CSAT Label' only for display.
 
 """

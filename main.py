@@ -10,7 +10,7 @@ from tools import tools
 
 load_dotenv()
 api_key = os.getenv("openrouter")
-MODEL_NAME = "openai/gpt-oss-20b:free"
+MODEL_NAME = "openai/gpt-oss-120b"
 client = OpenAI(api_key=api_key, base_url="https://openrouter.ai/api/v1")
 
 LOCAL_IMAGE_LINK_RE = re.compile(r"!\[[^\]]*\]\(file://[^)]*\)")

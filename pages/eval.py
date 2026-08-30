@@ -42,7 +42,7 @@ question_5_answer = round(
 
 question_6 = "Which month had the most tickets submitted?"
 question_6_answer = (
-    pd.to_datetime(df["Survey_response_Date"], format="%d-%b-%y")
+    pd.to_datetime(df["Survey_response_Date"], format="%Y-%m-%d")
     .dt.to_period("M")
     .value_counts()
     .index[0]
